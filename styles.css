@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@535&display=swap');
+*, *::after, *::before{
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;          
+}
+
+html{
+scroll-behavior: smooth;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 6rem 1rem;
+    margin: 10rem 0 3rem;
+}
+
+.boxes{
+    padding: 20px;
+    margin: 1rem 10px 0 10px;
+}
+
+.lorem{
+    color: rgba(255, 221, 0, 0.999);
+    font-size: 11rem;
+    font-family: ariel;
+    animation: fade-up 800ms 400ms forwards;
+}
+
+.container .boxes{
+    border-right: 1px solid grey;
+}
+
+.container .boxes:last-child{
+    border: none;
+}
+
+header{
+    text-align: center;
+    font-family: calibri;
+    background: black;
+    color: white;
+    padding: 12px ;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    font-weight: 900;
+    letter-spacing: 5px;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+.img{
+    background: url("images/keyboard.jpg");
+    height: 80vh;
+    width: 100% ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-y: center;
+    background-position-x: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    font-size: 6rem;
+}
+
+@keyframes fade-up{
+    0%{
+        transform: translateY(100%) ;
+    }
+
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+.mainhead{
+    margin: 4rem 7rem;
+}    
+
+.instr {
+    margin: 0 7rem -150px;
+    
+}
+
+.instr, .info1, .info2a{
+    color: #1d1d1f;
+}  
+
+#foot{
+    text-align: center;
+    background: #0a0a0a;
+    color: white;
+    height: 10rem;
+    line-height: 10rem;
+    font-weight: 100;
+}
+
+.top{
+    position: fixed;
+    bottom: 30px;
+    right: 5px;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    background: rgba(0.04, 0.04, 0.04, 0.0);
+    color: white;
+    transition: all 500ms ease;
+    border-radius: 50px ;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    transition: all 500ms ease;
+}
+
+.instr ,.boxes, .someInfo{
+    line-height: 1.65;
+}
+
+.lorem4{
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+}
+
+.someInfo{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.someInfo > div{
+    flex: 1;
+    flex-basis: 50%;
+    padding: 4rem 8rem;
+}
+
+.info1, .info1a{
+    background: #6AD7C5;
+}
+
+.info2, .info2a{
+    background: #FD88A7;
+}
+
+
+
+/* ----------MEDIA QUERIES------------- */
+@media (max-width: 1200px){
+    .img{
+        font-size: 4.5rem;
+        height: 60vh;
+    }
+
+    .lorem{
+        font-size: 4.6rem;
+    }
+
+    .container{
+        margin: 10rem 0 2rem;
+        flex-wrap: wrap;
+    }
+
+    .container .boxes{
+        border-bottom: 1px solid gray;
+        border-right: none;
+    }
+
+    .someInfo > div{
+    flex: 1;
+    flex-basis: 50%;
+    padding: 4rem 2rem;
+    }
+}
+
+
+
+/* -------MOBILE------ */
+
+@media (max-width: 768px){
+    .img{
+        font-size: 2.7rem;
+        height: 40vh;
+        padding: 0 2rem;
+    }
+    .lorem{
+        font-size: 3.9rem;
+    }
+
+    .container{
+        margin: 1rem 0 1rem;
+    }
+
+    .instr {
+        margin: 0 3rem 10px;
+    }
+
+    .mainhead{
+        margin: 2rem 3rem;
+    }
+
+    .container .boxes{
+        padding: 20px;
+        margin: 0.5rem -3rem 0.8rem;
+    }
+
+    .lorem4{
+        margin: 0 2rem 2rem;
+    }
+
+    .someInfo > div{
+        flex: 1;
+        flex-basis: 100%;
+    }
+
+    .info1a{
+        order: 1;
+        margin-bottom: -3rem;
+    }
+
+    .info1{
+        order: 2;
+        align-items: start;
+    }
+
+    .info2{
+        order: 3;
+        margin-bottom: -3rem;
+    }
+
+    .info2a{
+        order: 4;
+    }
+}
+
+
+@media (max-width: 520px){
+    .img{
+        font-size: 1.7rem;
+        padding: 0 1.1rem;
+        height: 30vh;
+    }
+
+    .lorem{
+        font-size: 3rem;
+    }
+
+    .mainhead{
+        margin: 2rem 1.8rem;
+    }
+
+    .instr{
+        margin: 0rem 1.8rem;
+    }
+
+    .container .boxes{
+        padding-bottom: 1rem;
+        margin: 0rem -4rem;
+    }
+}
